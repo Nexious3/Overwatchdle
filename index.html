@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overwatchdle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header / Title -->
+  <header>
+    <h1 class="logo">OVERWATCHDLE</h1>
+    
+    <!-- Navigation Icons -->
+    <div class="nav-icons">
+      <button class="nav-btn" id="stats-btn" title="Stats">📊</button>
+      <button class="nav-btn" id="streak-btn" title="Streak">🔥 <span id="streak-count">0</span></button>
+      <button class="nav-btn" id="patch-btn" title="Patch Notes">📋</button>
+      <button class="nav-btn" id="help-btn" title="Help / How to Play">❓</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="instructions">
+      <h2>GUESS TODAY'S OVERWATCH HERO</h2>
+      <p>TYPE ANY HERO TO BEGIN.</p>
+    </div>
+
+    <!-- Progressive Clue Cards -->
+    <div class="clues-container">
+      <div class="clue-card" id="quote-card">
+        <div class="clue-icon">“ ”</div>
+        <div class="clue-title">QUOTE CLUE</div>
+        <div class="clue-status" id="quote-status">IN 4 TRIES</div>
+      </div>
+
+      <div class="clue-card" id="ability-card">
+        <div class="clue-icon">🔥</div>
+        <div class="clue-title">ABILITY CLUE</div>
+        <div class="clue-status" id="ability-status">IN 8 TRIES</div>
+      </div>
+
+      <div class="clue-card" id="silhouette-card">
+        <div class="clue-icon">👤</div>
+        <div class="clue-title">SILHOUETTE CLUE</div>
+        <div class="clue-status" id="silhouette-status">IN 12 TRIES</div>
+      </div>
+    </div>
+
+    <!-- Input Section with Slanted Submit Button -->
+    <div class="search-section">
+      <div class="input-wrapper">
+        <input type="text" id="hero-input" placeholder="Type hero name..." autocomplete="off">
+        <ul id="autocomplete-list" class="autocomplete-list"></ul>
+      </div>
+      <button id="submit-btn" class="submit-btn">SUBMIT</button>
+    </div>
+
+    <!-- Guesses Table Headers -->
+    <div class="table-header">
+      <div class="header-cell">Hero</div>
+      <div class="header-cell">Gender</div>
+      <div class="header-cell">Role</div>
+      <div class="header-cell">Species</div>
+      <div class="header-cell">Origin</div>
+      <div class="header-cell">Affiliation</div>
+      <div class="header-cell">Health</div>
+      <div class="header-cell">Year</div>
+    </div>
+
+    <!-- Guesses List -->
+    <div id="guesses-container"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
